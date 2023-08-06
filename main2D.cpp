@@ -12,6 +12,7 @@ int main() {
     });
     std::cout << matrix << std::endl;
     auto path = findBestPathFromSrcToDesWithDfs(matrix, Node(0,0), Node(5,2));
+    //auto path = findBestPathFromSrcToDesWithBfs(matrix, Node(0,0), Node(5,2));
     std::cout << "Result" << std::endl;
     for (auto & node : path) {
         std::cout << node << " ";
