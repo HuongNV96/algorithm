@@ -1,4 +1,4 @@
-#include "Matrix2D.hpp" 
+#include "Algorithm2D.hpp"
 
 int main() {
     Matrix2D<int> matrix(std::string("A"), 
@@ -11,8 +11,8 @@ int main() {
         {1, 3, 5, -1},
     });
     std::cout << matrix << std::endl;
-    auto path = findBestPathFromSrcToDesWithDfs(matrix, Node(0,0), Node(5,2));
-    //auto path = findBestPathFromSrcToDesWithBfs(matrix, Node(0,0), Node(5,2));
+    //auto path = findBestPathFromSrcToDesWithDfs(matrix, Node(0,0), Node(5,2));
+    auto path = findBestPathFromSrcToDesWithBfs(matrix, Node(0,0), Node(5,2));
     std::cout << "Result" << std::endl;
     for (auto & node : path) {
         std::cout << node << " ";
